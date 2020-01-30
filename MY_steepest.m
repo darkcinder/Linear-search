@@ -58,7 +58,7 @@ j=1;
 while j < 1000
     a = 0.5*(a_lo+a_hi);
     phi = (c*(x1+a*p(1))-2)^4+((x2+a*p(2))^2)*(c*(x1+a*p(1))-2)^2+(x2+a*p(2)+1)^2;
-    if phi > phi0 + c*a*dphi0 || phi >= phi_lo
+    if phi > phi0 + 0.1*a*dphi0 || phi >= phi_lo
         a_hi = a;
     else
         dphi = 4*c*p(1)*(c*(x1+a*p(1))-2)^3+2*(x2+a*p(2))*p(2)*(c*(x1+a*p(1))-2)^2+((x2+a*p(2))^2)*2*(c*(x1+a*p(1))-2)*c*p(1)+2*(x2+a*p(2)+1)*p(2);
